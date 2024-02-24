@@ -67,12 +67,16 @@ local plugins = {
       }
 	end,
   },
-{
-    'CWood-sdf/spaceport.nvim',
-    opts = {
-
-    },
-    lazy = false, -- load spaceport immediately
-}
+  {
+    'github/copilot.vim',
+    lazy = false,
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    lazy = false,
+    build = function() vim.fn["mkdp#util#install"]() end,
+  }
 }
 return plugins

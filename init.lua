@@ -18,4 +18,5 @@ end
 
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
+vim.g.copilot_assume_mapped = true
 require "plugins"
